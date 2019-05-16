@@ -34,8 +34,8 @@ def plot_boundary(first_mixture, second_mixture):
     clf = GaussianNB()
     clf.fit(X, Y)
     # predict the classification probabilities on a grid
-    xlim = (-1, 8)
-    ylim = (-1, 5)
+    xlim = (first_mixture[:, 0].min() - 1, first_mixture[:, 0].max() + 1)
+    ylim = (first_mixture[:, 1].min() - 1, first_mixture[:, 1].max() + 1)
     xx, yy = np.meshgrid(np.linspace(xlim[0], xlim[1], 100), np.linspace(ylim[0], ylim[1], 100))
     Z = clf.predict_proba(np.c_[xx.ravel(), yy.ravel()])
     Z = Z[:, 1].reshape(xx.shape)
