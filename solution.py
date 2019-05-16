@@ -14,11 +14,15 @@ def create_data_set():
         first_mixture_point = [0, 0]
         second_mixture_point = [0, 0]
         for i in range(5):
-            first_mixture_point[0] += COMPONENT_WEIGHT_1[i]*np.random.normal(0, 1)
-            first_mixture_point[1] += COMPONENT_WEIGHT_1[i]*np.random.normal(-1, 1)
+            mean = random.uniform(-1, 0)
+            first_mixture_point[0] += COMPONENT_WEIGHT_1[i]*np.random.normal(mean, 1)
+            mean = random.uniform(-1, 0)
+            first_mixture_point[1] += COMPONENT_WEIGHT_1[i]*np.random.normal(mean, 1)
 
-            second_mixture_point[0] += COMPONENT_WEIGHT_2[i]*np.random.normal(0, 1)
-            second_mixture_point[1] += COMPONENT_WEIGHT_2[i]*np.random.normal(1, 1)
+            mean = random.uniform(0, 1)
+            second_mixture_point[0] += COMPONENT_WEIGHT_2[i]*np.random.normal(mean, 1)
+            mean = random.uniform(0, 1)
+            second_mixture_point[1] += COMPONENT_WEIGHT_2[i]*np.random.normal(mean, 1)
 
         first_mixture.append(first_mixture_point)
         second_mixture.append(second_mixture_point)
