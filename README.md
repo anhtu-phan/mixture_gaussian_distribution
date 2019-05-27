@@ -1,2 +1,2 @@
-# assignment_tiki_interview
+# mixture_gaussian_distribution
 Create a data set with 100 points from two mixed Gaussian distributions (each distribution has five two Gaussian distributions). The elements of the first mixed distribution have a maximum average value of 0 and a minimum average of -1 and a variance of 1. The elements of the second mixed distribution have a dark mean value. multi is 1., the minimum average is 0 and the variance is 1. Draw decision boundary between 100 points of the first mixture distribution and 100 points of the second mixture distribution don't need to train any machine learning models.
